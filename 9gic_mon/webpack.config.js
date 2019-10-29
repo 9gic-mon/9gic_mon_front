@@ -11,15 +11,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
         use: {
           loader: "babel-loader"
         }
       },
       {
-        test: /\.(ts|tsx)$/,
-        loader: "ts-loader"
+        loader: "ts-loader",
+        test: /\.(ts|tsx)$/
       },
       {
         test: /\.html$/,
@@ -46,9 +46,9 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
+              limit: 200000,
               name: "[name].[ext]?[hash]",
-              publicPath: "/dist",
-              limit: 200000
+              publicPath: "/dist"
             }
           }
         ]
@@ -56,25 +56,23 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
-    alias: {
-      "react-dom": "@hot-loader/react-dom"
-    }
+    extensions: ["*", ".js", ".jsx", ".ts", ".tsx"]
   },
+  node: { fs: "empty" },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./public/index.html",
+      favicon: "./public/favicon.ico",
       filename: "./index.html",
       showErrors: true,
-      favicon: "./public/favicon.ico"
+      template: "./public/index.html"
     }),
     new MiniCssExtractPlugin({
-      template: "[name].css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
+      template: "[name].css"
     })
   ],
-  devtool: "inline-source-map",
   devServer: {
     historyApiFallback: true
-  }
+  },
+  devtool: "none"
 };
