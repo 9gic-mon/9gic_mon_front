@@ -53,12 +53,24 @@ module.exports = {
           }
         ]
       }
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //       options: {
+      //         limit: 200000,
+      //         name: "[name].[ext]?[hash]",
+      //         publicPath: "/dist"
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   },
   resolve: {
     extensions: ["*", ".js", ".jsx", ".ts", ".tsx"]
   },
-  node: { fs: "empty" },
   plugins: [
     new HtmlWebPackPlugin({
       favicon: "./public/favicon.ico",
@@ -74,5 +86,5 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  devtool: "none"
+  devtool: "inline-source-map"
 };
