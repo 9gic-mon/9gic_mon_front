@@ -1,26 +1,28 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100%;   
+    width: 100vw;
+    height: 100vh;   
     display: flex;
     flex-direction: column;
     background: white;
+    position: relative;
 `;
 
-export const TextContainer = styled.div`
-    margin-left: 7.9%;
+export const TextContainer = styled.pre`
+    width: 100vw;
+    height: 24.7vh;
+    margin-left: 7.9vw;
     font-family: NanumSquare;
     font-size: 20px;
-    margin-top: 4.2%;
-    line-height: 1.2;
+    margin-top: 4.2vh;
 `;
 
 export const CheckBoxContainer = styled.div`
-    width: 100%;
-    height: 2.85%;
-    margin-top: 30%;
-    margin-left: 74.7%;
+    width: 100vw;
+    height: 2.3vh;
+    margin-top: 30vh;
+    margin-left: 74.7vw;
     display: flex;
     align-items: center;
 `;
@@ -36,20 +38,22 @@ export const CheckBoxText = styled.div`
     font-size: 20px;
     font-weight: bold;
     color: #000000;
-    margin-left: 0.5%;
+    margin-left: 0.5vw;
 `;
 
 export const NextButton = styled.button`
-    width: 180px;
-    height: 60px;
+    width: 9.4vw;
+    height: 50.6vh;
     color: white;
     background-color: #dedede;
     border: 2px solid #dedede;
     border-radius: 10px;
     font-family: Daum;
     font-size: 25px;
+    text-align: center;
     
-    margin-top: 6.6%;
-    margin-left: 83.2%;
-    padding: 24px, 45px, 24px, 45px;
+    margin-top: 6.6vh;
+    margin-left: 85vw;
+    margin-right: 4.7vw;
+    margin-bottom: 7.4vh;
 `;
