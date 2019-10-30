@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as S from './style';
 import * as H from '../../components/HeaderBeforeLogin/index';
 import * as T from '../../components/SignUpStepTitle/index';
+import * as N from '../../components/SignUpNextButton/index';
 
 const SignUpFirstStep : React.FC = () => 
 <S.Container>
@@ -24,7 +25,7 @@ const SignUpFirstStep : React.FC = () =>
         <S.Checkbox />
         <S.CheckBoxText>모든 약관을 읽었으며, 이에 동의합니다.</S.CheckBoxText>
     </S.CheckBoxContainer>
-    <S.NextButton>다음    ></S.NextButton>
+    <N.default></N.default>
 </S.Container>
 
 export default SignUpFirstStep;
