@@ -10,6 +10,6 @@
     "baseUrl": "src",
     "typeRoots": ["/node_modules/@types", "@types"]
   },
-  "include": ["./src/**/*.ts"],
+  "include": ["./src/**/*.ts", "./src/@types/**/*.d.ts"],
   "exclude": ["./node_modules", "./**/*.spec.ts"]
 }
