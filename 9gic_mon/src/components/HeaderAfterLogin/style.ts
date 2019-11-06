@@ -33,26 +33,10 @@ export const LogoImage = styled.div`
     background-color: #ffaace;
 `;
 
-export const ListContainer = styled.ul`
-    all: unset;
-    display: flex;
-    width: 13vw;
-    margin-left: 68.6vw;
-    align-items: center;
-`;
-
-export const ListItem = styled.li`
-    all: unset;
+export const ProfileButton = styled.button`
+    margin-left: 75.5vw;
+    font-family: NanumSquare;
     font-size: 18px;
-`;
-
-export const ListItmeBar = styled.div`
-    /* height: 15px; */
-    height: 1.5vh;
-    border-left: 1px solid #000;
-    display: inline-block;
-    margin-left: 1vw;
-    margin-right: 1vw;
 `;
 
 export const BottomBar = styled.div`
