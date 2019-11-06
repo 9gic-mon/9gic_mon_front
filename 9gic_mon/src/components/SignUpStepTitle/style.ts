@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
 `;
 
 export const TitileContainer = styled.div`
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 13.1vh;
-    margin-left: 7.6vw;
+    margin-top: 145px;
+    margin-left: 145px;
 `;
 
 export const MainTitle = styled.p`
@@ -27,12 +26,12 @@ export const SubTitle = styled.p`
     font-size: 25px;
     font-weight: bold;
     color: #707070;
-    margin-left: 0.5vw;
+    margin-left: 10px;
 `;
 
 export const BottomBar = styled.div`
     width: 391px;
     border-top: 3px solid #ffaace;
-    margin-top: 0.9vh;
-    margin-left: 7.3vw;
+    margin-top: 10px;
+    margin-left: 140px;
 `;

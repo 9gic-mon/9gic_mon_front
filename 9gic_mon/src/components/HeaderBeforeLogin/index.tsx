@@ -5,6 +5,7 @@ import * as S from './style';
 const HeaderBeforeLogin : React.FC = () => 
     <S.Container>
         <S.TopContainer>
+            <S.LogoImage />
             <S.ListContainer>
                 <S.ListItem>로그인</S.ListItem>
                 <S.ListItmeBar />
