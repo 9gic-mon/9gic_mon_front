@@ -11,12 +11,15 @@ const SignUpSecondStep : React.FC = () =>
     <S.BottomContainer>
         <S.ImageContainer>
             <S.ImageTitle>학생</S.ImageTitle>
+            <S.Image></S.Image>
         </S.ImageContainer>
         <S.ImageContainer>
             <S.ImageTitle>교사</S.ImageTitle>
+            <S.Image></S.Image>
         </S.ImageContainer>
         <S.LastImageContainer>
             <S.ImageTitle>기업</S.ImageTitle>
+            <S.Image></S.Image>
         </S.LastImageContainer>
     </S.BottomContainer>
 </S.Container>
