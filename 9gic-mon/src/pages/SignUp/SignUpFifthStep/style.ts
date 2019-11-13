@@ -10,11 +10,10 @@ export const Container = styled.div`
   margin-top: 16%;
 `;
 
-export const ReplaceImage = styled.div`
+export const ReplaceImage = styled.img`
   width: 200px;
   height: 200px;
-  background-color: #ffaace;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 `;
 
 export const Text = styled.p`
