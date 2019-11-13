@@ -1,18 +1,17 @@
-import * as React from 'react';
+import * as React from "react";
+import { withRouter, RouteComponentProps } from "react-router-dom";
 
-import * as S from './style';
-import * as H from '../../components/HeaderBeforeLogin/index';
-import * as T from '../../components/SignUpStepTitle/index';
-import * as N from '../../components/SignUpNextButton/index'
+import * as S from "./style";
+import checkedImg from "../../../assets/signup/success.png";
 
-const SignUpFifthStep : React.FC = () => 
-<S.Container>
-    <H.default />
-    <T.default />
-    <S.ReplaceImage />
-    <S.Text>회원가입의 모든 과정이 완료되었습니다.<pre />귀하의 학교 학생 권한 요청이 승인되면 메일을 다시 발송해 드리겠습니다.<pre />권한을 승인 받은 후에 서비스를 이용할 수 있습니다.</S.Text>
-    <S.ButtonGoToMainPage>메인페이지로 돌아가기</S.ButtonGoToMainPage>
-    <N.default />
-</S.Container>
+const SignUpFifthStep: React.FC<RouteComponentProps> = ({ history }) => (
+  <S.Container>
+    <S.ReplaceImage src={checkedImg} alt="성공" />
+    <S.Text>회원가입의 모든 과정이 완료되었습니다.</S.Text>
+    <S.ButtonGoToMainPage isActivation={true} onClick={() => history.push("/")}>
+      로그인페이지로 돌아가기
+    </S.ButtonGoToMainPage>
+  </S.Container>
+);
 
-export default SignUpFifthStep;
+export default withRouter(SignUpFifthStep);
