@@ -24,7 +24,7 @@ const handleClick = (): void => {
 const SignIn: React.FC<Props> = () => {
   const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
-  const [isActivation, setIsActivation] = React.useState<Boolean>(false);
+  const [isActivation, setIsActivation] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     email && password ? setIsActivation(true) : setIsActivation(false);
@@ -46,11 +46,10 @@ const SignIn: React.FC<Props> = () => {
           placeholder="PW"
           onChange={e => handleChange(e, setPassword)}
         />
-        {isActivation ? (
-          <S.LoginBtn onClick={handleClick}>SIGN IN</S.LoginBtn>
-        ) : (
-          <S.ActivationLoginBtn>SIGN IN</S.ActivationLoginBtn>
-        )}
+
+        <S.LoginBtn onClick={handleClick} isActivation={isActivation}>
+          SIGN IN
+        </S.LoginBtn>
 
         <div>
           <S.helpContent>아직 계정이 없으신가요?</S.helpContent>

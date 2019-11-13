@@ -9,8 +9,19 @@ export const Input = styled.input`
   color: #707070;
 `;
 
-export const applyBtn = styled.button`
+export const applyBtn = styled.button<{ isActivation: boolean }>`
   border-radius: 5px;
-  background-color: #fca8cb;
+  background-color: ${props => (props.isActivation ? "#fca8cb" : "#dedede")};
   color: #ffffff;
+`;
+
+export const KeepSafeLineContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const KeepSafeLineContent = styled.div`
+  width: 1200px;
+  display: inline-block;
+  padding: 4%;
 `;

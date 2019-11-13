@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import * as D from "../../style/default";
-import BackgroundImg from "../../assets/Background.png";
+import BackgroundImg from "../../assets/signin/Background.png";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -50,14 +50,9 @@ export const LoginInput = styled(D.Input)`
 export const LoginBtn = styled(D.applyBtn)`
   width: 300px;
   height: 55px;
-  color: white;
   margin: 10px 0 40px 0;
   font-size: 20px;
   text-align: center;
-`;
-
-export const ActivationLoginBtn = styled(LoginBtn)`
-  background-color: #c9c9c9;
 `;
 
 export const helpContent = styled.span`

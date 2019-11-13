@@ -1,34 +1,33 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { applyBtn } from "../../../style/default";
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100vh;   
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16%;
 `;
 
-export const ReplaceImage = styled.div`
-    width: 200px;
-    height: 200px;
-    margin-top: 194.5px;
-    background-color: #ffaace;
+export const ReplaceImage = styled.img`
+  width: 200px;
+  height: 200px;
+  margin-bottom: 4%;
 `;
 
 export const Text = styled.p`
-    font-family: AppleSDGothicNeo;
-    font-size: 30px;
-    text-align: center;
-    color: #707070;
-    margin-top: 40px;
+  font-size: 30px;
+  text-align: center;
+  color: #707070;
 `;
 
-export const ButtonGoToMainPage = styled.button`
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: #ffaace;
-    margin-top: 40px;
+export const ButtonGoToMainPage = styled(applyBtn)`
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffaace;
+  margin-top: 16%;
+  font-size: 18px;
+  text-align: center;
 `;

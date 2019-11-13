@@ -1,11 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const NextButton = styled.button`
-    width: 180px;
-    height: 60px;
-    border-radius: 10px;
-    background-color: #ffaace;
+import { applyBtn } from "../../../style/default";
 
-    margin-top: 70px;
-    margin-left: 1600px;
+export const NextBtn = styled(applyBtn)`
+  width: 160px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
 `;

@@ -1,17 +1,24 @@
-import * as React from 'react';
+import * as React from "react";
 
-import * as S from './style';
-import * as H from '../../components/HeaderBeforeLogin/index';
-import * as T from '../../components/SignUpStepTitle/index';
-import * as N from '../../components/SignUpNextButton/index'
+import * as S from "./style";
+import NextBtn from "../../../components/SignUp/SignUpNextButton";
+import MailImg from "../../../assets/signup/email.png";
 
-const SignUpFourthStep : React.FC = () => 
-<S.Container>
-    <H.default />
-    <T.default />
-    <S.ReplaceImage />
-    <S.Text>등록된 귀하의 이메일주소로 인증 메일을 전송하였습니다.<pre />해당 메일을 확인하여 주세요.</S.Text>
-    <N.default />
-</S.Container>
+interface Props {
+  setStep: (step: number) => void;
+}
+
+const SignUpFourthStep: React.FC<Props> = ({ setStep }) => (
+  <>
+    <S.Container>
+      <S.ReplaceImage src={MailImg} alt="메일" />
+      <S.Text>
+        등록된 귀하의 이메일주소로 인증 메일을 전송하였습니다. <br />
+        해당 메일을 확인하여 주세요.
+      </S.Text>
+    </S.Container>
+    <NextBtn step={4} setStep={setStep} isActivation={true} />
+  </>
+);
 
 export default SignUpFourthStep;
