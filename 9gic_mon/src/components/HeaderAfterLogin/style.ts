@@ -33,7 +33,7 @@ export const LogoImage = styled.div`
     background-color: #ffaace;
 `;
 
-export const ProfileButton = styled.button`
+export const ProfileButton = styled.div`
     margin-left: 75.5vw;
     font-family: NanumSquare;
     font-size: 18px;
