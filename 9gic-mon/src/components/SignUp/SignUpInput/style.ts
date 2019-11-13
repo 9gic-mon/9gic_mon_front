@@ -1,53 +1,66 @@
-import styled from 'styled-components';
-import * as D from '../../style/default';
+import styled from "styled-components";
+import * as D from "../../../style/default";
+
+interface Alert {
+  isSame: boolean;
+}
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 `;
 
 export const SubContainer = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+  margin-left: 5%;
 `;
 
 export const Title = styled.p`
-    font-family: NanumSquare;
-    font-size: 30px;
-    margin-top: 60px;
-    margin-left: 486px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 4%;
 `;
 
 export const InputBoxContainer = styled.div`
-    margin-top: 25px;
-    margin-left: 498.5px;
-    display: flex;
-    align-items: center;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
 `;
 
 export const LeftContainer = styled.div`
-    width: 200px;
-    margin-right: 285.5px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+  width: 200px;
+  margin-right: 35%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 `;
 
 export const LeftBar = styled.div`
-    height: 35px;
-    border-left: solid 2px #ffaace;
+  height: 35px;
+  border-left: solid 2px #ffaace;
 `;
 
 export const InputBoxTitle = styled.p`
-    font-family: NanumSquare;
-    font-size: 25px;
-    font-weight: bold;
-    color: #707070;
-    margin-left: 11.5px;
+  font-family: NanumSquare;
+  font-size: 25px;
+  font-weight: bold;
+  color: #707070;
+  margin-left: 11.5px;
 `;
 
 export const TextInputBox = styled(D.Input)`
-    width: 450px;
-    height: 55px;
+  width: 450px;
+  height: 55px;
+  padding: 0 2%;
+`;
+
+export const AlertText = styled.span<Alert>`
+  font-size: 15px;
+  color: #8e2828;
+  margin-left: calc(35% + 200px);
+  margin-top: 1%;
+  ${props => props.isSame && "visibility: hidden;"}
 `;
