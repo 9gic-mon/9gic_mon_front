@@ -41,8 +41,7 @@ export const LastImageContainer = styled(ImageContainer)`
 export const ImageTitle = styled.p``;
 
 export const Image = styled.img`
-  width: 256px;
-  height: 256px;
+  width: 70%;
   display: inline-block;
   margin-top: 15%;
 `;

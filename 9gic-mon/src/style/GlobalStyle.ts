@@ -51,11 +51,9 @@ export const GlobalStyle: GlobalStyleComponent<
   }
   a {
     &:link{
-      color: #000;
       text-decoration: none;
     }
     &:visited{
-      color: #000;
       text-decoration: none;
     }
   }

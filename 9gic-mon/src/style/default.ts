@@ -21,7 +21,11 @@ export const KeepSafeLineContainer = styled.div`
 `;
 
 export const KeepSafeLineContent = styled.div`
-  width: 1200px;
+  width: 1000px;
   display: inline-block;
   padding: 4%;
+`;
+
+export const horizontalLine = styled.hr`
+  width: 100%;
 `;

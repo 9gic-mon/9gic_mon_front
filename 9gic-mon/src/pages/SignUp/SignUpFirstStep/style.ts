@@ -6,15 +6,15 @@ export const TextContainer = styled.pre`
 `;
 
 export const CheckBoxContainer = styled.div`
-  width: 29%;
   display: flex;
   align-items: center;
   margin-top: 40%;
+  position: absolute;
+  bottom: 12%;
 `;
 
-export const CheckBoxText = styled.div`
+export const CheckBoxText = styled.p`
   font-size: 20px;
   font-weight: bold;
   color: #000000;
-  margin-left: 1%;
 `;

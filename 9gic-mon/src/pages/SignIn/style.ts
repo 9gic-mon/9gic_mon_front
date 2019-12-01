@@ -60,7 +60,7 @@ export const helpContent = styled.span`
   color: #707070;
 `;
 
-export const SignUpText = styled.button`
+export const SignUpText = styled.a`
   margin-left: 40px;
   font-size: 15px;
   color: #fca8cb;

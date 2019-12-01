@@ -4,7 +4,6 @@ import FirstStep from "./SignUpFirstStep";
 import SecondStep from "./SignUpSecondStep";
 import ThirdStep from "./SignUpThirdthStep_Corporation";
 import FourthStep from "./SignUpFourthStep";
-import FifthStep from "./SignUpFifthStep";
 import Header from "../../components/Header/HeaderBeforeLogin";
 import Title from "../../components/SignUp/SignUpStepTitle";
 import * as S from "./style";
@@ -18,9 +17,7 @@ const setContent = (step: number, setStep: (step: number) => void) => {
     case 3:
       return <ThirdStep setStep={setStep} />;
     case 4:
-      return <FourthStep setStep={setStep} />;
-    case 5:
-      return <FifthStep />;
+      return <FourthStep />;
     default:
       return null;
   }

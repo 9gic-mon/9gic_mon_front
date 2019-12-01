@@ -39,21 +39,20 @@ export const LeftContainer = styled.div`
 `;
 
 export const LeftBar = styled.div`
-  height: 35px;
+  height: 30px;
   border-left: solid 2px #ffaace;
 `;
 
 export const InputBoxTitle = styled.p`
-  font-family: NanumSquare;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   color: #707070;
   margin-left: 11.5px;
 `;
 
 export const TextInputBox = styled(D.Input)`
-  width: 450px;
-  height: 55px;
+  width: 420px;
+  height: 48px;
   padding: 0 2%;
 `;
 
@@ -63,4 +62,15 @@ export const AlertText = styled.span<Alert>`
   margin-left: calc(35% + 200px);
   margin-top: 1%;
   ${props => props.isSame && "visibility: hidden;"}
+`;
+
+export const TellInputContainer = styled.div`
+  width: 453px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const TellInputBox = styled(TextInputBox)`
+  width: 80px;
+  text-align: center;
 `;

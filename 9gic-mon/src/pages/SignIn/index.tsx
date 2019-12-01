@@ -2,6 +2,7 @@ import * as React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 
 import * as S from "./style";
+import { postCoUserSignIn } from "../../lib/api";
 
 interface OwnProps {
   setToken: (payload: { accessToken: string; sessionToken: string }) => void;
@@ -16,12 +17,20 @@ const handleChange = (
   setMethod(e.target.value);
 };
 
-const handleClick = (): void => {
-  console.log("click");
-  // 로그인 통신
+const handleClick = async (payload: { email: string; password: string }) => {
+  try {
+    const response = await postCoUserSignIn({
+      coUserEmail: payload.email,
+      coUserPassword: payload.password
+    });
+
+    sessionStorage.setItem("token", response.token);
+  } catch (e) {
+    console.log(1);
+  }
 };
 
-const SignIn: React.FC<Props> = () => {
+const SignIn: React.FC<Props> = ({ history }) => {
   const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
   const [isActivation, setIsActivation] = React.useState<boolean>(false);
@@ -47,13 +56,18 @@ const SignIn: React.FC<Props> = () => {
           onChange={e => handleChange(e, setPassword)}
         />
 
-        <S.LoginBtn onClick={handleClick} isActivation={isActivation}>
+        <S.LoginBtn
+          onClick={() => handleClick({ email, password })}
+          isActivation={isActivation}
+        >
           SIGN IN
         </S.LoginBtn>
 
         <div>
           <S.helpContent>아직 계정이 없으신가요?</S.helpContent>
-          <S.SignUpText>SIGN UP</S.SignUpText>
+          <S.SignUpText href="http://localhost:3000/signup">
+            SIGN UP
+          </S.SignUpText>
         </div>
       </S.LoginModal>
       <S.rightText>GOOGICMON</S.rightText>

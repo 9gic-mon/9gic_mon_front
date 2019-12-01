@@ -15,8 +15,6 @@ const getSubtitle = (step: number): string => {
     case 3:
       return "- 정보 기입";
     case 4:
-      return "- 이메일 인증";
-    case 5:
       return "- 완료";
     default:
       return "";
